@@ -10,7 +10,7 @@ wget https://copr.fedorainfracloud.org/coprs/bieszczaders/kernel-cachyos-addons/
 wget https://copr.fedorainfracloud.org/coprs/bieszczaders/kernel-cachyos/repo/fedora-$(rpm -E %fedora)/bieszczaders-kernel-cachyos-fedora-$(rpm -E %fedora).repo -O /etc/yum.repos.d/_copr_cachyos.repo
 dnf remove kernel kernel-core kernel-modules kernel-modules-core kernel-modules-extra -y
 
-dnf install libcap-ng libcap-ng-devel procps-ng procps-ng-devel uksmd -y
+dnf install libcap-ng libcap-ng-devel procps-ng procps-ng-devel -y #uksmd
 
 dnf install -y --allowerasing \
     kernel-cachyos \
