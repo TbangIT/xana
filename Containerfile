@@ -51,6 +51,13 @@ RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
     --mount=type=tmpfs,dst=/tmp \
     bash /ctx/greenboot.sh && \
     ostree container commit
+#3 Try with nvdia + custom kernel
+RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
+    --mount=type=cache,dst=/var/cache \
+    --mount=type=cache,dst=/var/log \
+    --mount=type=tmpfs,dst=/tmp \
+    bash /ctx/nvidia.sh && \
+    ostree container commit
 
 # ... (altre righe esistenti) ...
 # Prova per flatpak
