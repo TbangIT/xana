@@ -1,0 +1,11 @@
+[Unit]
+Description=Crea directory per Flatpak custom storage
+Before=flatpak-system-helper.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/mkdir -p /var/home/flatpak-storage
+ExecStart=/usr/bin/chmod 777 /var/home/flatpak-storage
+
+[Install]
+WantedBy=multi-user.target
