@@ -15,8 +15,6 @@ dnf install libcap-ng libcap-ng-devel procps-ng procps-ng-devel -y #uksmd
 dnf install -y --allowerasing \
     kernel-cachyos \
     kernel-cachyos-devel \
-    kernel-cachyos-headers \
     kernel-cachyos-modules \
-    kernel-cachyos-modules-extra
-
-systemctl enable uksmd.service
+    kernel-cachyos-devel-matched
+#systemctl enable uksmd.service
