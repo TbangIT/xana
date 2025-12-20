@@ -51,12 +51,12 @@ RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
     --mount=type=tmpfs,dst=/tmp \
     bash /ctx/greenboot.sh && \
     ostree container commit
-#3 Try with nvdia + custom kernel
+#3 Try with custom kernel
 RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
     --mount=type=cache,dst=/var/cache \
     --mount=type=cache,dst=/var/log \
     --mount=type=tmpfs,dst=/tmp \
-    bash /ctx/nvidia.sh && \
+    bash /ctx/cachy.sh && \
     ostree container commit
 
 # ... (altre righe esistenti) ...
