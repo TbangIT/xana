@@ -1,5 +1,3 @@
-systemctl enable podman.socket
-
 #!/usr/bin/env bash
 source /ctx/common
 
