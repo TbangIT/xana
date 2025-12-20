@@ -8,9 +8,9 @@ echo "### Inizio installazione CachyOS Kernel & UKSMD ###"
 # Usiamo -O per salvare i file nella cartella corretta
 wget https://copr.fedorainfracloud.org/coprs/bieszczaders/kernel-cachyos-addons/repo/fedora-$(rpm -E %fedora)/bieszczaders-kernel-cachyos-addons-fedora-$(rpm -E %fedora).repo -O /etc/yum.repos.d/_copr_cachyos-addons.repo
 wget https://copr.fedorainfracloud.org/coprs/bieszczaders/kernel-cachyos/repo/fedora-$(rpm -E %fedora)/bieszczaders-kernel-cachyos-fedora-$(rpm -E %fedora).repo -O /etc/yum.repos.d/_copr_cachyos.repo
-dnf remove kernel kernel-core kernel-modules kernel-modules-core kernel-modules-extra
+dnf remove kernel kernel-core kernel-modules kernel-modules-core kernel-modules-extra -y
 
-dnf install libcap-ng libcap-ng-devel procps-ng procps-ng-devel uksmd
+dnf install libcap-ng libcap-ng-devel procps-ng procps-ng-devel uksmd -y
 
 dnf install -y --allowerasing \
     kernel-cachyos \
