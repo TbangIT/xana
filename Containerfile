@@ -52,6 +52,14 @@ RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
     bash /ctx/greenboot.sh && \
     ostree container commit
 
+# ... (altre righe esistenti) ...
+# Prova per flatpak
+COPY config/custom-flatpak.conf /etc/flatpak/installations.d/custom-flatpak.conf
+COPY config/create-flatpak-dir.service /usr/lib/systemd/system/create-flatpak-dir.service
+RUN systemctl enable create-flatpak-dir.service
+
+# ... (fine del file) ...
+
 ### LINTING
 ## Verify final image and contents are correct.
 RUN bootc container lint
