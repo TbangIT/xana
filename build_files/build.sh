@@ -12,8 +12,9 @@ set -ouex pipefail
 # this installs a package from fedora repos
 dnf5 install -y tmux 
 
-# Use a COPR Example:
-#
+# Install cromite from COPR
+dnf copr enable atsitimolan/cromite
+dnf install cromite
 # dnf5 -y copr enable ublue-os/staging
 # dnf5 -y install package
 # Disable COPRs so they don't end up enabled on the final image:
