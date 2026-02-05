@@ -19,29 +19,6 @@ dnf5 -y install cromite
 # dnf5 -y install package
 # Disable COPRs so they don't end up enabled on the final image:
 # dnf5 -y copr disable ublue-os/staging
-
-flatpak uninstall --delete-data "org.mozilla.firefox"
-flatpak uninstall --delete-data "org.mozilla.Thunderbird"
-flatpak uninstall --delete-data "org.kde.gwenview"
-flatpak uninstall --delete-data "org.kde.haruna"
-flatpak uninstall --delete-data "org.kde.okular"
-flatpak uninstall --delete-data "org.kde.kcalc"
-flatpak uninstall --delete-data "org.kde.kcalc"
-flatpak uninstall --delete-data "org.kde.kcalc"
-flatpak uninstall --delete-data "org.kde.kcalc"
-flatpak uninstall --delete-data "org.kde.kcalc"
-flatpak uninstall --delete-data "org.kde.skanpage"
-flatpak uninstall --delete-data "org.kde.kontact"
-flatpak uninstall --delete-data "org.kde.kweather"
-flatpak uninstall --delete-data "org.kde.kclock"
-flatpak uninstall --delete-data "org.kde.kclock"
-flatpak uninstall --delete-data "org.gnome.DejaDup"
-flatpak uninstall --delete-data "org.fedoraproject.MediaWriter"
-
-
-
-
-flatpak uninstall --unused --system -y || true
 #### Example for enabling a System Unit File
 
 systemctl enable podman.socket
