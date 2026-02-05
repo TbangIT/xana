@@ -36,7 +36,7 @@ FLATPAK_KILL_LIST=(
 
 for app in "${FLATPAK_KILL_LIST[@]}"; do
     if [ -d "/var/lib/flatpak/app/$app" ]; then
-        rm -rf "/var/lib/flatpak/app/$app"
+        flatpak uninstall --delete-data "$app"
         echo "Rimosso App: $app"
     fi
 done
