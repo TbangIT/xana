@@ -19,27 +19,28 @@ dnf5 -y install cromite
 # dnf5 -y install package
 # Disable COPRs so they don't end up enabled on the final image:
 # dnf5 -y copr disable ublue-os/staging
-FLATPAK_KILL_LIST=(
-    "org.mozilla.firefox"
-    "org.mozilla.Thunderbird"
-    "org.kde.gwenview"        # Visualizzatore Immagini
-    "org.kde.haruna"          # Video Player
-    "org.kde.okular"          # PDF Reader
-    "org.kde.kcalc"           # Calcolatrice
-    "org.kde.skanpage"        # Scanner
-    "org.kde.kontact"         # Suite contatti/mail
-    "org.kde.kweather"        # Meteo
-    "org.kde.kclock"
-    "org.gnome.DejaDup"            # Backup
-    "org.fedoraproject.MediaWriter"
-)
 
-for app in "${FLATPAK_KILL_LIST[@]}"; do
-    if [ -d "/var/lib/flatpak/app/$app" ]; then
-        flatpak uninstall --delete-data "$app"
-        echo "Rimosso App: $app"
-    fi
-done
+flatpak uninstall --delete-data "org.mozilla.firefox"
+flatpak uninstall --delete-data "org.mozilla.Thunderbird"
+flatpak uninstall --delete-data "org.kde.gwenview"
+flatpak uninstall --delete-data "org.kde.haruna"
+flatpak uninstall --delete-data "org.kde.okular"
+flatpak uninstall --delete-data "org.kde.kcalc"
+flatpak uninstall --delete-data "org.kde.kcalc"
+flatpak uninstall --delete-data "org.kde.kcalc"
+flatpak uninstall --delete-data "org.kde.kcalc"
+flatpak uninstall --delete-data "org.kde.kcalc"
+flatpak uninstall --delete-data "org.kde.skanpage"
+flatpak uninstall --delete-data "org.kde.kontact"
+flatpak uninstall --delete-data "org.kde.kweather"
+flatpak uninstall --delete-data "org.kde.kclock"
+flatpak uninstall --delete-data "org.kde.kclock"
+flatpak uninstall --delete-data "org.gnome.DejaDup"
+flatpak uninstall --delete-data "org.fedoraproject.MediaWriter"
+
+
+
+
 flatpak uninstall --unused --system -y || true
 #### Example for enabling a System Unit File
 
