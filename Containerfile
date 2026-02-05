@@ -54,9 +54,9 @@ RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
 #3 
 
 # Prova per flatpak
-COPY config/custom-flatpak.conf /etc/flatpak/installations.d/custom-flatpak.conf
-COPY config/create-flatpak-dir.service /usr/lib/systemd/system/create-flatpak-dir.service
-RUN systemctl enable create-flatpak-dir.service
+# COPY config/custom-flatpak.conf /etc/flatpak/installations.d/custom-flatpak.conf
+# COPY config/create-flatpak-dir.service /usr/lib/systemd/system/create-flatpak-dir.service
+# RUN systemctl enable create-flatpak-dir.service
 
 # ... (fine del file) ...
 
