@@ -16,9 +16,7 @@ dnf5 install -y tmux
 dnf5 -y copr enable atsitimolan/cromite
 dnf5 -y install cromite
 dnf5 -y copr enable sdegler/hyprland
-dnf5 -y install Step 4 Install hyprland and sddm
-
-sudo dnf install hyprland tuned tuned-ppd kitty hyprpolkitagent pavucontrol alsa-sof-firmware alsa-utils blueman NetworkManager-wifi iwl* nm-connection-editor-desktop gvfs gvfs-mtp
+dnf5 -y hyprland tuned tuned-ppd kitty hyprpolkitagent pavucontrol alsa-sof-firmware alsa-utils blueman NetworkManager-wifi iwl* nm-connection-editor-desktop gvfs gvfs-mtp
 
 # dnf5 -y copr enable ublue-os/staging
 # dnf5 -y install package
