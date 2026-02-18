@@ -15,6 +15,9 @@ dnf5 install -y tmux
 # Install cromite from COPR
 dnf5 -y copr enable atsitimolan/cromite
 dnf5 -y install cromite
+dnf5 -y copr enable ashbuk/Hyprland-Fedora
+
+
 # dnf5 -y copr enable ublue-os/staging
 # dnf5 -y install package
 # Disable COPRs so they don't end up enabled on the final image:
